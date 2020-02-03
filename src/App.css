@@ -6,7 +6,6 @@ header {
   display: flex;
   padding-left: 5vw;
 }
-
 header > h1 {
   font-size: xx-large;
   font-weight: 800;
@@ -16,7 +15,14 @@ header > h1 {
 body {
   background-color: whitesmoke;
 }
-
+.popCorn {
+  width: 80px;
+  height: 80px;
+  background-color: grey;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  margin-right: 10px;
+}
 .movieInformation {
   display: flex;
   flex-direction: column;
@@ -26,21 +32,18 @@ body {
   background-color: grey;
   margin: 20px;
 }
-
 .MovieTitle {
   padding: 5px;
   font-size: x-large;
   font-weight: 700;
   font-family: "Anton", sans-serif;
 }
-
 .rating {
   padding: 5px;
   font-size: x-large;
   font-weight: 700;
   font-family: "Anton", sans-serif;
 }
-
 .searchBar {
   display: flex;
   flex-direction: row;
@@ -49,9 +52,7 @@ body {
   align-items: space-around;
   align-content: stretch;
   margin-left: 10px;
-  
 }
-
 .SearchMenu {
   display: flex;
   align-items: space-evenly;
@@ -59,24 +60,19 @@ body {
   align-content: flex-start;
   margin: 10px;
   border: 10px;
-  
 }
-
-
 #searchButton {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  #searchButton:hover {
-    font-size: 17px;
-    color: aqua;
-  }
-  
-
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+#searchButton:hover {
+  font-size: 17px;
+  color: aqua;
+}
 .NewMovieButton {
   outline: solid 5px black;
 }
@@ -85,7 +81,6 @@ p {
   width: 20vw;
   border-radius: red;
 }
-
 .V_D_Buttons {
   width: 20vw;
   display: flex;
@@ -102,7 +97,6 @@ p {
   text-align: center;
   margin: 10px;
 }
-
 .DeleteButton {
   border-radius: 8px;
   background-color: black;
@@ -110,7 +104,6 @@ p {
   border: none;
   padding: 15px 32px;
 }
-
 #vbutton {
   background-color: black;
   border: none;
@@ -118,12 +111,10 @@ p {
   font-size: 16px;
   font-weight: 700;
 }
-
 #vbutton:hover {
   font-size: 17px;
   color: aqua;
 }
-
 #dbutton {
   background-color: black;
   border: none;
@@ -135,13 +126,10 @@ p {
   font-size: 17px;
   color: aqua;
 }
-
-
 .videoBox {
   width: 50vw;
   height: 30vh;
 }
-
 .ViewBox {
   outline: 4px solid black;
   display: flex;
@@ -160,7 +148,6 @@ p {
   font-family: "Anton", sans-serif;
   text-decoration: underline overline;
 }
-
 .BackButtonDiv {
   width: 1vw;
   display: flex;
@@ -182,24 +169,20 @@ p {
   font-size: 16px;
   font-weight: 700;
 }
-
 #BackButtonId:hover {
   width: 40px;
   color: aqua;
 }
-
 .youtubeInput {
   height: 4.5vh;
   width: 11vw;
   margin-right: 28vw;
   outline: 4px solid black;
 }
-
 #youtubeId {
   width: 11vw;
   height: 4vh;
 }
-
 .video {
   display: flex;
   justify-content: center;
@@ -207,7 +190,6 @@ p {
   height: 40vh;
   background-color: black;
 }
-
 .messageWriting {
   font-family: "Indie Flower", cursive;
   font-size: x-large;
@@ -216,8 +198,6 @@ p {
   padding-top: 5px;
   width: 50vw;
 }
-
-
 .SubmitMessageDiv {
   display: flex;
   display: flex;
@@ -226,19 +206,13 @@ p {
   justify-content: space-evenly;
   align-items: flex-start;
   align-content: stretch;
-  
- 
 }
-
 .message {
-    height: 35px;
-    margin-right: 20px;
-    margin-left: 30px;
-    outline: 4px solid black;
-    
-    
+  height: 35px;
+  margin-right: 20px;
+  margin-left: 30px;
+  outline: 4px solid black;
 }
-
 .SubmitMessage {
   margin: 5px;
   background-color: black;
@@ -251,10 +225,7 @@ p {
   margin-right: 100px;
   font-weight: 800;
   border: black;
-
-  
 }
-
 #SubmitMessageId:hover {
   width: 8vw;
   color: aqua;

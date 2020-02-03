@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Movie from "./Components/Movie/Movie";
 import Form from "./Components/Form/Form";
+import popCorn from "./Components/popcorn4.png";
 // import EditMovie from "./Components/EditMovie/EditMovie"
 
 class App extends Component {
@@ -23,14 +24,6 @@ class App extends Component {
       });
     });
   }
-
-  // getTrailers() {
-  //   axios.get("api/trailers").then(res => {
-  //     this.setState({
-  //       movies: res.data
-  //     })
-  //   })
-  // }
 
   getMovies() {
     axios.get("/api/movies").then(res => {
@@ -61,7 +54,7 @@ class App extends Component {
   };
 
   updateMovie = (id, MovieInfo) => {
-    console.log('look here', id, MovieInfo)
+    console.log("look here", id, MovieInfo);
     axios.put(`/api/update/${id}`, MovieInfo).then(res => {
       this.setState({
         movies: res.data
@@ -87,25 +80,13 @@ class App extends Component {
     return (
       <div>
         <header>
-          {/* <img src="./popcorn1.svg" alt="logo"/> */}
+          <img className="popCorn" src={popCorn} />
           <h1>Movie Library</h1>
         </header>
-        <div className="searchBar">
+        <main className="searchBar">
           <Form create={this.createMovie} />
           {mappedMovies}
-        </div>
-
-        {/* <div className="SearchMenu">
-        <button className="" onClick={this.handleClicked}>
-            Search
-          </button>
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            placeholder="title"
-            onChange={this.handleChange}/>
-          </div> */}
+        </main>
       </div>
     );
   }

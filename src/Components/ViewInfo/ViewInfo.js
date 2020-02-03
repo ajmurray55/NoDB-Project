@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import EditMovie from ''
 
 class ViewInfo extends Component {
   constructor(props) {
@@ -39,7 +38,6 @@ class ViewInfo extends Component {
   };
 
   async handleClicked() {
-    // const { title } = this.state;
     const movieData = await axios
       .get(`http://www.omdbapi.com/?t=${this.state.title}&apikey=2c2f9947`)
       .then(res => {
@@ -60,31 +58,35 @@ class ViewInfo extends Component {
       <div className="ViewBox">
         <h2 className="MovieInfoTitle">Movie Info</h2>
         <div className="outerBackButton">
-        <div className="BackButtonDiv">
-          <button className="BackButton"id="BackButtonId"onClick={this.props.toggle}>Back</button>
-        </div>
+          <div className="BackButtonDiv">
+            <button
+              className="BackButton"
+              id="BackButtonId"
+              onClick={this.props.toggle}
+            >
+              Back
+            </button>
+          </div>
         </div>
         <div>
-
           <div className="youtubeInput">
-          <input 
-            id="youtubeId"
-            type="text"
-            name="youtube"
-            value={this.state.youtube}
-            placeholder="Movie Trailer Url"
-            onChange={this.handleChange}
-          />
-            </div>
-          {/* <iframe src={this.state.youtube}></iframe> */}
+            <input
+              id="youtubeId"
+              type="text"
+              name="youtube"
+              value={this.state.youtube}
+              placeholder="Movie Trailer Url"
+              onChange={this.handleChange}
+            />
+          </div>
         </div>
 
         <div className="video">
           <iframe
             className="Trailer"
-            padding-top="10"
-            width="650"
-            height="325"
+            padding-top="5"
+            width="680"
+            height="330"
             src={this.state.youtube}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -92,7 +94,7 @@ class ViewInfo extends Component {
           ></iframe>
         </div>
 
-        <div className="SubmitMessageDiv">
+        <footer className="SubmitMessageDiv">
           <form onSubmit={this.handleClick}>
             <input
               className="message"
@@ -102,11 +104,16 @@ class ViewInfo extends Component {
               placeholder="Message about the trailer"
               onChange={this.handleChange}
             />
-            
-            <input id="SubmitMessageId" className="SubmitMessage" type="submit" value="Submit" />
+
+            <input
+              id="SubmitMessageId"
+              className="SubmitMessage"
+              type="submit"
+              value="Submit"
+            />
           </form>
-            <p className="messageWriting">{this.props.movie.message}</p>
-        </div>
+          <p className="messageWriting">{this.props.movie.message}</p>
+        </footer>
       </div>
     );
   }

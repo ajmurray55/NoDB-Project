@@ -10,7 +10,7 @@ class Form extends Component {
       Poster: "",
       youtube: null,
       rating: "",
-      message: ''
+      message: ""
     };
     this.handleClicked = this.handleClicked.bind(this);
   }
@@ -23,8 +23,7 @@ class Form extends Component {
   };
 
   handleClicked(e) {
-    // const { title } = this.state;
-    e.preventDefault()
+    e.preventDefault();
     axios
       .get(`http://www.omdbapi.com/?t=${this.state.title}&apikey=2c2f9947`)
       .then(movieData => {
@@ -34,7 +33,7 @@ class Form extends Component {
             title: movieData.data.Title,
             Poster: movieData.data.Poster,
             rating: "Rotten Tomatoes " + movieData.data.Ratings[1].Value,
-            message: ''
+            message: ""
           },
           this.handleClick
         );
@@ -50,7 +49,6 @@ class Form extends Component {
       youtube,
       rating,
       message
-    
     };
     console.log("in between new movie and this.props.state", newMovie);
     this.props.create(newMovie);
@@ -66,15 +64,16 @@ class Form extends Component {
       <div>
         <div className="SearchMenu">
           <form onSubmit={this.handleClicked}>
-            <input className="NewMovieButton"
+            <input
+              className="NewMovieButton"
               type="text"
               name="title"
               value={this.state.title}
               placeholder="title"
               onChange={this.handleChange}
             />
-          <input id="searchButton" value="Search" type="submit" />
-        </form>
+            <input id="searchButton" value="Search" type="submit" />
+          </form>
         </div>
       </div>
     );
